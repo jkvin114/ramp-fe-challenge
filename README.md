@@ -28,7 +28,7 @@ in `App.tsx`, change property 'disabled' of `view more` button to `paginatedTran
 ### Bug 7:
 in `setTransactionApproval()` of `Transactions/index.tsx`, import 'clearCacheByEndpoint()` from useCustomFetch, and add 
 ```
-useCustomFetch(["paginatedTransactions","transactionsByEmployee"])
+clearCacheByEndpoint(["paginatedTransactions","transactionsByEmployee"])
 ```
 This clears the cache if user updates verification status of a transaction, so that the page can re-fetch the data again from database after a verification status change.
 
